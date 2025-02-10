@@ -1,0 +1,242 @@
+/* Общие стили */
+body {
+    font-family: 'Kitsch', sans-serif; /* Подключаем шрифт Kitsch */
+    background-color: #15212c; /* Темно-синий фон */
+    color: #E8EBF0; /* Основной цвет текста */
+    margin: 0;
+    padding: 0;
+    line-height: 1.3; /* Межстрочное расстояние */
+}
+
+h1 {
+    font-size: 25px; /* Размер H1 для веб */
+    font-weight: bold;
+    text-transform: uppercase; /* Все заглавные */
+     background: linear-gradient(0.359turn, rgba(255,145,57,1) 0%, rgba(224,198,110,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px; /* Размер H2 для веб */
+    color: #E5F1FF;
+    margin-bottom: 8px;
+}
+
+/* Основной текст */
+p {
+   font-size: 18px;
+
+}
+
+/*Вспомогательный*/
+.user-status, #user-role{
+  font-size: 14px;
+}
+
+/*Кнопки*/
+button, .footer-btn{
+   font-size: 14px;
+   text-transform: uppercase;
+}
+
+/*Поля ввода*/
+input{
+    font-size:14px;
+}
+
+
+a {
+    text-decoration: none;
+      background: linear-gradient(0.359turn, rgba(255,145,57,1) 0%, rgba(224,198,110,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Контейнеры */
+.container, .post, .slider-container {
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 3px; /* Минимальное расстояние между элементами */
+     background-color: #101922;/*фон контейнеров*/
+}
+
+.slider-container{
+  border: 1px solid;
+  border-image: linear-gradient(0.359turn, rgba(255,145,57,1) 0%,rgba(224,198,110,1) 100%) 1;
+}
+
+/* Шапка */
+header {
+    background-color: #15212c;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /*Фиксированая шапка*/
+    top: 0;
+    z-index: 100; /*Поверх всего контента*/
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Скрываем меню по умолчанию (для мобильных) */
+    position: absolute;
+    top: 60px; /* Под шапкой */
+    left: 0;
+    background-color: #15212c;
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    z-index: 99;
+     padding: 10px;
+}
+
+.menu.show {
+    display: block; /* Показываем меню при клике на "гамбургер" */
+}
+
+.menu li {
+    padding: 10px 0;
+
+}
+.menu li a {
+    padding: 10px;
+    display: block;
+}
+
+/*Аватар*/
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+/*Подсказки*/
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+.tooltip-trigger:hover .tooltip {
+  display: block;
+}
+
+/* Подвал (прилипший) */
+footer {
+    background-color: #15212c;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-menu button {
+    background: none;
+    border: none;
+    color: #E8EBF0;
+    cursor: pointer;
+    font-size: 20px;
+     margin-right: 10px;
+
+}
+
+/* Стили для больших экранов */
+@media (min-width: 768px) {
+     body {
+        padding: 70px; /* Отступы по краям */
+        background-color: #000; /*Темный фон*/
+    }
+
+    .app-container{
+       border-radius: 15px;
+       box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); /* Золотая тень */
+       background-color: #15212c;/*фон внутри окна*/
+       overflow: hidden;/*Скрываем выпадающее меню за краями*/
+    }
+
+    h1 {
+        font-size: 25px; /* Размер H1 для веб */
+    }
+    h2 {
+       font-size: 20px;
+    }
+   p{
+      font-size: 18px;
+   }
+   .user-status, #user-role{
+     font-size: 14px;
+   }
+     button, .footer-btn{
+      font-size: 14px;
+     }
+      input{
+      font-size:14px;
+   }
+
+
+    .menu {
+        display: flex; /* Меню всегда видно */
+        position: static; /* Убираем абсолютное позиционирование */
+        width: auto;
+        background-color: transparent;
+         border-radius: 0;
+    }
+
+    .menu-icon{
+      display: none;/*Скрываем иконку меню*/
+    }
+    .menu li {
+       display: inline-block;/*Пункты в ряд*/
+       margin-right: 15px;
+    }
+    #content{
+      padding: 20px;/*Добавляем отступы внутри*/
+    }
+}
+
+/*Мобильная версия*/
+@media (max-width: 767px){
+     h1 {
+        font-size: 18px; /* Размер H1 для веб */
+    }
+    h2 {
+       font-size: 16px;
+    }
+   p{
+      font-size: 14px;
+   }
+   .user-status, #user-role{
+     font-size: 12px;
+   }
+   button, .footer-btn{
+      font-size: 12px;
+     }
+    input{
+      font-size:12px;
+   }
+   .menu {
+        top: 50px;/*Адаптация под мобилку*/
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сообщество</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="fonts/Kitsch/stylesheet.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Логотип</div>
+        <nav>
+            <div class="menu-icon">&#9776;</div> <ul class="menu">
+                <li><a href="#" data-page="schedule">Расписание событий</a></li>
+                <li><a href="#" data-page="knowledge">База знаний</a></li>
+                <li><a href="#" data-page="chat">Чат сообщества</a></li>
+                <li><a href="#" data-page="messages">Сообщения</a></li>
+                <li><a href="#" data-page="subscriptions">Подписки</a></li>
+                <li><a href="#" data-page="settings">Настройки</a></li>
+                <li><a href="#" data-page="help">Помощь</a></li>
+                <li><a href="#" data-page="about">О сообществе</a></li>
+                <li><a href="#" id="logout-btn">Выход</a></li>
+                <li class="webinar-btn-container"><button id="webinar-btn" disabled>Онлайн вебинар</button></li> </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <div id="profile-page" class="page">
+            <div class="user-info">
+                <div class="avatar-container">
+                    <img src="images/default-avatar.png" alt="Аватар" class="avatar">
+                    <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+                </div>
+                <div class="user-details">
+                    <h1 id="user-name">Имя пользователя</h1>
+                    <p class="user-status">Статус: <span id="user-role">Базовый</span>
+                        <span class="tooltip-trigger">?
+                            <span class="tooltip">
+                                Информация о вашем уровне доступа.  Чтобы перейти на уровень "Ученик", оплатите подписку.
+                            </span>
+                        </span>
+                    </p>
+
+                    <button id="friends-btn">Друзья</button>
+                </div>
+             <div id="favorites">Избранное</div>
+            </div>
+            <div class="slider-container">
+             </div>
+
+            <div class="posts-container">
+                <div class="post">
+                  </div>
+            </div>
+          <button id="load-more-posts">Загрузить ещё</button>
+        </div>
+
+        <div id="schedule-page" class="page" style="display: none;">
+            <h1>Расписание событий</h1>
+             </div>
+        <div id="knowledge-page" class="page" style="display: none;">
+            </div>
+        <div id="chat-page" class="page" style="display: none;">
+           </div>
+         <div id="messages-page" class="page" style="display: none;">
+           </div>
+         <div id="subscriptions-page" class="page" style="display: none;">
+           </div>
+         <div id="settings-page" class="page" style="display: none;">
+          </div>
+         <div id="help-page" class="page" style="display: none;">
+            </div>
+        <div id="about-page" class="page" style="display: none;">
+          </div>
+        <div id="login-page" class="page" style="display:none">
+          <h1>Вход</h1>
+            <button id="telegram-login-btn">Войти через Telegram</button>
+           <p>© Все права защищены Gibinder Shcool</p>
+            <a href="/privacy-policy">Политика конфиденциальности</a>
+            <a href="/terms-of-service">Условия оферты</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-menu">
+            <button id="back-to-top-btn" style="display: none;">&#8593;</button>
+             <button id="messages-footer-btn" class="footer-btn">✉️</button>
+            <button id="chat-footer-btn" class="footer-btn">💬</button>
+            <button id="knowledge-footer-btn" class="footer-btn">📚</button>
+
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
